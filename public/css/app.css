@@ -1,5 +1,6 @@
 body {
-  background-image: url("/assets/bg.jpg"); }
+  background-image: url("/assets/bg.jpg");
+  text-align: center; }
 
 .logo {
   text-align: center;
@@ -19,19 +20,40 @@ body {
     background-color: #424244;
     border: none; }
 
+#context {
+  padding: 100px; }
+  #context .postBox {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    color: gray;
+    background-color: white;
+    display: inline-block;
+    padding: 25px 20px 15px 20px;
+    margin-bottom: 20px;
+    flex-direction: row; }
+    #context .postBox .imgBox {
+      background-size: cover; }
+
+/*
 @media screen and (min-width: 600px) {
-  #context .postBox .imgBox {
-    background-size: cover; } }
+  #context{
+    .postBox{
+      max-width: 500px;
+      .imgBox{
+        background-size: cover;
+      }
+    }
+  }
+}
+
 
 @media screen and (min-width: 1040px) {
-  #context .postBox .imgBox {
-    background-size: cover; } }
-
-.postBox {
-  font-family: 'Oswald', sans-serif;
-  font-size: 20px;
-  color: gray;
-  background-color: white;
-  text-align: center;
-  display: inline-block;
-  max-width: 330px; }
+  #context{
+    .postBox{
+      max-width: 500px;
+      .imgBox{
+        background-size: cover;
+      }
+    }
+  }
+} */

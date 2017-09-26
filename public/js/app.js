@@ -3,7 +3,7 @@ console.log("SANITY IS DEAD");
 
 
 
-var mainContainer = document.getElementById("context");
+let mainContainer = document.getElementById("context");
 
 
 //title
@@ -15,50 +15,58 @@ var mainContainer = document.getElementById("context");
 //upvotes or comments
 
 //moment js
+var mainSite = "https://www.reddit.com/r/EarthPorn.json";
 
-var photoReq = new XMLHttpRequest();
+
+let photoReq = new XMLHttpRequest();
 photoReq.addEventListener("load", getPhoto);
 photoReq.open('GET', "https://www.reddit.com/r/EarthPorn.json");
 photoReq.send();
 
 function getPhoto () {
-  var content = JSON.parse(this.responseText).data.children;
+  let content = JSON.parse(this.responseText).data.children;
   var i = 0, len = content.length;
   for(i+=i; i < len; i++){
 
     var everyPost = document.createElement("div");
     everyPost.className = "postBox";
-    everyPost.style.height = "500px";
-    everyPost.style.width = "330px";
+    everyPost.style.height = "400px";
+    everyPost.style.width = "300px";
+    everyPost.innerHTML = "";
     mainContainer.appendChild(everyPost);
 
 
-    var eachPhoto = document.createElement("div");
+    let eachPhoto = document.createElement("div");
     eachPhoto.className = "imgBox";
     eachPhoto.style.height = "200px";
     eachPhoto.style.width = "300px";
     imageUrl = content[i].data.preview.images[0].source.url;
     eachPhoto.style.backgroundImage = `url('${imageUrl}')`;
     everyPost.appendChild(eachPhoto);
-    console.log(content);
 
-    var eachTitle = document.createElement("h5");
+    let eachTitle = document.createElement("h5");
     eachTitle.className = "titleBox";
     eachTitle.innerHTML = content[i].data.title;
     everyPost.appendChild(eachTitle);
 
-    var eachAuthor = document.createElement("h6");
+    let eachAuthor = document.createElement("h6");
     eachAuthor.className = "eachAuthor";
     eachAuthor.innerHTML = "posted by: " + content[i].data.author;
     everyPost.appendChild(eachAuthor);
+
+/*    let timeCreated = document.createElement("div");
+    timeCreated.className = "timeCreated";
+    let timeData = mainSite[i].data;
+    timeCreated.innerHTML = moment.unix(timeData.created_utc.fromNow());
+    everyPost.appendChild(timeCreated);*/
+
+    let eachVotes = document.createElement("h6");
+    eachVotes.className = "eachVotes";
+    eachVotes.innerHTML = `${content[i].data.ups}` + " upvotes";
+    everyPost.appendChild(eachVotes);
+
   }
 }
 
-/*var logo = document.getElementsClassName("logo");
-logo.style.height = "100px";
-logo.stle.width = "100%";
-logo.style.backgroundImage = "url('${/assets/bg.jpg}')";*/
 
-
-//"url(${imageUrl})";
 
