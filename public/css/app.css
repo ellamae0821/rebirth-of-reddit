@@ -1,67 +1,37 @@
-@import "./partials/variables";
+body {
+  background-image: url("/assets/bg.jpg"); }
 
-body{
-  background-image: url("/assets/bg.jpg");
-}
-
-
-
-
-.logo{
+.logo {
   text-align: center;
   background-color: white;
   display: block;
-  position: relative;
-}
+  position: relative; }
 
-
-#buttonWrapper{
+#buttonWrapper {
   text-align: center;
   background-color: #424244;
-  display: block;
-  .btn {
+  display: block; }
+  #buttonWrapper .btn {
     font-family: 'Oswald', sans-serif;
     font-size: 18px;
     color: gray;
     text-align: center;
     background-color: #424244;
-    border: none;
-  }
-}
-
+    border: none; }
 
 @media screen and (min-width: 600px) {
-  #context{
-    .postBox{
-
-      .imgBox{
-        background-size: cover;
-      }
-    }
-  }
-}
-
+  #context .postBox .imgBox {
+    background-size: cover; } }
 
 @media screen and (min-width: 1040px) {
-  #context{
-    .postBox{
+  #context .postBox .imgBox {
+    background-size: cover; } }
 
-      .imgBox{
-        background-size: cover;
-      }
-    }
-  }
-}
-
-.postBox{
+.postBox {
   font-family: 'Oswald', sans-serif;
   font-size: 20px;
   color: gray;
   background-color: white;
   text-align: center;
   display: inline-block;
-  max-width: 330px;
-}
-
-
-
+  max-width: 330px; }
