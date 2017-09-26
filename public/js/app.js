@@ -18,6 +18,16 @@ let mainContainer = document.getElementById("context");
 var mainSite = "https://www.reddit.com/r/EarthPorn.json";
 
 
+
+/*var random = document.getElementById("random");
+let randomReq = new XMLHttpRequest();
+randomReq.addEventListener("click", openRandom );
+randomReq.open("GET", "https://www.reddit.com/r/popular/");
+randomReq.send();
+
+
+*/
+
 let photoReq = new XMLHttpRequest();
 photoReq.addEventListener("load", getPhoto);
 photoReq.open('GET', "https://www.reddit.com/r/EarthPorn.json");
@@ -46,27 +56,30 @@ function getPhoto () {
 
     let eachTitle = document.createElement("h5");
     eachTitle.className = "titleBox";
-    eachTitle.innerHTML = content[i].data.title;
+    var titleUrl = content[i].data.title;
+    eachTitle.innerHTML = titleUrl;
     everyPost.appendChild(eachTitle);
 
-    let eachAuthor = document.createElement("h6");
+    let eachAuthor = document.createElement("div");
     eachAuthor.className = "eachAuthor";
-    eachAuthor.innerHTML = "posted by: " + content[i].data.author;
+    eachAuthor.innerHTML = "posted by: " + content[i].data.author + " ●";
     everyPost.appendChild(eachAuthor);
 
-/*    let timeCreated = document.createElement("div");
+    let timeCreated = document.createElement("div");
     timeCreated.className = "timeCreated";
-    let timeData = mainSite[i].data;
-    timeCreated.innerHTML = moment.unix(timeData.created_utc.fromNow());
-    everyPost.appendChild(timeCreated);*/
+    let timeData = content[i].data;
+    timeCreated.innerHTML = moment.unix(timeData.created_utc).fromNow() + " ●";
+    everyPost.appendChild(timeCreated);
 
-    let eachVotes = document.createElement("h6");
+    let eachVotes = document.createElement("div");
     eachVotes.className = "eachVotes";
     eachVotes.innerHTML = `${content[i].data.ups}` + " upvotes";
     everyPost.appendChild(eachVotes);
 
+
   }
 }
+
 
 
 

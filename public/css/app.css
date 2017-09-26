@@ -25,7 +25,7 @@ body {
   #context .postBox {
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
-    color: gray;
+    color: black;
     background-color: white;
     display: inline-block;
     padding: 25px 20px 15px 20px;
@@ -33,6 +33,21 @@ body {
     flex-direction: row; }
     #context .postBox .imgBox {
       background-size: cover; }
+      #context .postBox .imgBox .titleBox {
+        text-align: left;
+        text-overflow: ellipsis; }
+
+.eachAuthor, .timeCreated, .eachVotes {
+  float: left;
+  font-family: 'Oswald', sans-serif;
+  color: gray;
+  padding: 0px 5px;
+  display: inline-block;
+  font-size: 15px; }
+
+.summary {
+  font-size: 10px;
+  text-overflow: ellipsis; }
 
 /*
 @media screen and (min-width: 600px) {
