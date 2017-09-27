@@ -1,6 +1,14 @@
 body {
   background-image: url("/assets/bg.jpg");
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 60px; }
+  body .footer {
+    position: static;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: #424244;
+    overflow: hidden; }
 
 .logo {
   text-align: center;
@@ -21,7 +29,8 @@ body {
     border: none; }
 
 #context {
-  padding: 100px; }
+  padding: 100px;
+  margin: 0 auto -30px; }
   #context .postBox {
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
@@ -30,7 +39,9 @@ body {
     display: inline-block;
     padding: 25px 20px 15px 20px;
     margin-bottom: 20px;
-    flex-direction: row; }
+    margin-right: 20px;
+    flex-direction: row;
+    vertical-align: middle; }
     #context .postBox .imgBox {
       background-size: cover; }
       #context .postBox .imgBox .titleBox {
@@ -44,10 +55,6 @@ body {
   padding: 0px 5px;
   display: inline-block;
   font-size: 15px; }
-
-.summary {
-  font-size: 10px;
-  text-overflow: ellipsis; }
 
 /*
 @media screen and (min-width: 600px) {
