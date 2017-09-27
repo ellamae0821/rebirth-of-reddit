@@ -43,25 +43,22 @@ body {
     background-color: #424244;
     border: none; }
 
-#context {
-  padding: 100px;
-  margin: 0 auto -30px; }
-  #context .postBox {
-    font-family: 'Oswald', sans-serif;
-    font-size: 20px;
-    color: black;
-    background-color: white;
-    display: inline-block;
-    padding: 25px 20px 15px 20px;
-    margin-bottom: 20px;
-    margin-right: 20px;
-    flex-direction: row;
-    vertical-align: middle; }
-    #context .postBox .imgBox {
-      background-size: cover; }
-      #context .postBox .imgBox .titleBox {
-        text-align: left;
-        text-overflow: ellipsis; }
+#context .postBox {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  color: black;
+  background-color: white;
+  display: inline-block;
+  padding: 25px 20px 15px 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  flex-direction: row;
+  vertical-align: middle; }
+  #context .postBox .imgBox {
+    background-size: cover; }
+    #context .postBox .imgBox .titleBox {
+      text-align: left;
+      text-overflow: ellipsis; }
 
 .eachAuthor, .timeCreated, .eachVotes {
   float: left;
