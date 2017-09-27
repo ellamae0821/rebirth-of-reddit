@@ -22,6 +22,25 @@ body{
   position: relative;
 }
 
+#fast{
+  position: relative;
+  top: 0px;
+  left: 0px;
+//  display: inline;
+  z-index: 2;
+  top: 1px;
+}
+
+#wings{
+  position: relative;
+//  display: inline;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  top: -25px;
+  left: 1px;
+}
+
 #buttonWrapper{
   text-align: center;
   background-color: #424244;
@@ -66,7 +85,7 @@ body{
 
 .eachAuthor, .timeCreated, .eachVotes {
   float: left;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Lato', sans-serif;
   color: gray;
   padding: 0px 5px;
   display:inline-block;

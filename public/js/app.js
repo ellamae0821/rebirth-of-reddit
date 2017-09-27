@@ -4,35 +4,7 @@ console.log('SANITY IS DEAD');
 
 
 let mainContainer = document.getElementById('context');
-
-
-//title
-//photo = source:
-//author
-//datestamp
-//views
-//
-//upvotes or comments
-
-//moment js
-var mainSite = 'https://www.reddit.com/r/EarthPorn.json';
-
-
-
-/*var random = document.getElementById('random');
-let randomReq = new XMLHttpRequest();
-randomReq.addEventListener('click', openRandom );
-randomReq.open('GET', 'https://www.reddit.com/r/popular/');
-randomReq.send();
-
-
-*/
-
-/*let randomReq = document.getElementById('random');
-randomReq.addEventListener('click', getPhoto);
-randomReq.makerequest('GET', 'https://www.reddit.com/r/popular.json');
-
-*/
+let mainSite = 'https://www.reddit.com/r/EarthPorn.json';
 
 
 let photoReq = new XMLHttpRequest();
@@ -76,9 +48,7 @@ function getPhoto () {
     timeCreated.className = 'timeCreated';
     let timeData = content[i].data;
     timeCreated.innerHTML = moment.unix(timeData.created_utc).fromNow() + ' ●';
-/*    let timeData = content[i].data.created_utc;
-    let date = moment.unix(timeData).fromNow();
-    timeCreated.innerHTML = moment.unix.tz(date, "Pacific/Honolulu").format();*/
+
     everyPost.appendChild(timeCreated);
 
     let eachVotes = document.createElement('div');
